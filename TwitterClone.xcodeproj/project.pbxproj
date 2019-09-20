@@ -14,7 +14,6 @@
 		B93AE469227E87EE0057D9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE468227E87EE0057D9DD /* AppDelegate.swift */; };
 		B93AE470227E87EF0057D9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B93AE46F227E87EF0057D9DD /* Assets.xcassets */; };
 		B93AE473227E87EF0057D9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93AE471227E87EF0057D9DD /* LaunchScreen.storyboard */; };
-		B93AE47B227E8EE40057D9DD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE47A227E8EE40057D9DD /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		B93AE46F227E87EF0057D9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B93AE472227E87EF0057D9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B93AE474227E87EF0057D9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B93AE47A227E8EE40057D9DD /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 				508DDAF123347A860017E806 /* Controller */,
 				B93AE474227E87EF0057D9DD /* Info.plist */,
 				B93AE468227E87EE0057D9DD /* AppDelegate.swift */,
-				B93AE47A227E8EE40057D9DD /* HomeController.swift */,
 				B93AE46F227E87EF0057D9DD /* Assets.xcassets */,
 				B93AE471227E87EF0057D9DD /* LaunchScreen.storyboard */,
 			);
@@ -236,7 +233,6 @@
 				B93AE469227E87EE0057D9DD /* AppDelegate.swift in Sources */,
 				508DDAF523347AFF0017E806 /* Cells.swift in Sources */,
 				508DDAF023346E760017E806 /* HomeDatasourceController.swift in Sources */,
-				B93AE47B227E8EE40057D9DD /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
