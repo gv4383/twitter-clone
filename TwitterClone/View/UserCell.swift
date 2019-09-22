@@ -59,9 +59,10 @@ class UserCell: DatasourceCell {
         button.setTitle("Follow", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(twitterBlue, for: .normal)
-//        button.setImage(UIImage(named: "Twitter_Logo_Blue"), for: .normal)
-//        button.imageView?.contentMode = .scaleAspectFit
-//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
+        button.setImage(UIImage(named: "follow")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.imageView?.tintColor = twitterBlue
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
         return button
     }()
     

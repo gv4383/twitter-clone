@@ -12,6 +12,8 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBarItems()
+        
         let homeDatasource = HomeDataSource()
         self.datasource = homeDatasource
     }
@@ -40,7 +42,6 @@ class HomeDatasourceController: DatasourceController {
             // height = estimated frame height + 20 (name height) + 20 (username height) + 12 (top padding) + extra
             return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
         }
-//        print(user?.bioText)
         
         return CGSize(width: view.frame.width, height: 200)
     }
