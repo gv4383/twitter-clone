@@ -22,31 +22,8 @@ class HomeDatasourceController: DatasourceController {
         
         setupNavigationBarItems()
         
-//        let homeDatasource = HomeDataSource()
-//        self.datasource = homeDatasource
-        
-        fetchHomeFeed()
-    }
-    
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
-    
-    class JSONError: JSONDecodable {
-        required init(json: JSON) throws {
-            print("JSON ERROR")
-        }
-    }
-    
-    fileprivate func fetchHomeFeed() {
-        // start json fetch
-        let request: APIRequest<HomeDataSource, JSONError> = tron.swiftyJSON.request("/twitter/home")
-        
-        request.perform(withSuccess: { (homeDataSource) in
-            print("Successfully fetched our json objects")
-            print(homeDataSource.users.count)
-            
-            self.datasource = homeDataSource
-        }) { (err) in
-            print("Failed to fetch json...", err)
+        Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
+            self.datasource = homeDatasource
         }
     }
     
@@ -58,7 +35,7 @@ class HomeDatasourceController: DatasourceController {
         
         if let user = self.datasource?.item(indexPath) as? User {
             
-            // let's get an estimation of the height
+            // get estimation of the height
             // of our cellbased on user.bioText
             
             // frame width - 12 (image left padding) - 50 (profile image width) - 8 (image right padding) - 6 (extra spacing)

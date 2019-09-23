@@ -13,6 +13,7 @@
 		5081F79523372D85009F0963 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081F79423372D85009F0963 /* HomeDatasourceController+navbar.swift */; };
 		5081F79723381208009F0963 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081F79623381208009F0963 /* TweetCell.swift */; };
 		5081F79923381971009F0963 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081F79823381971009F0963 /* Tweet.swift */; };
+		5081F79C23387749009F0963 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081F79B23387749009F0963 /* Service.swift */; };
 		508DDAF023346E760017E806 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508DDAEF23346E760017E806 /* HomeDatasourceController.swift */; };
 		508DDAF523347AFF0017E806 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508DDAF423347AFF0017E806 /* UserHeaderFooter.swift */; };
 		508DDAF723347B370017E806 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508DDAF623347B370017E806 /* HomeDatasource.swift */; };
@@ -28,6 +29,7 @@
 		5081F79423372D85009F0963 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		5081F79623381208009F0963 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		5081F79823381971009F0963 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		5081F79B23387749009F0963 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		508DDAEF23346E760017E806 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		508DDAF423347AFF0017E806 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		508DDAF623347B370017E806 /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 				0D2CD6132B348C9CF681D5AC /* Pods-TwitterClone.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5081F79A2338772B009F0963 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5081F79B23387749009F0963 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		508DDAF123347A860017E806 /* Controller */ = {
@@ -111,6 +121,7 @@
 		B93AE467227E87EE0057D9DD /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				5081F79A2338772B009F0963 /* Service */,
 				508DDAF323347A980017E806 /* View */,
 				508DDAF223347A920017E806 /* Model */,
 				508DDAF123347A860017E806 /* Controller */,
@@ -251,6 +262,7 @@
 				5081F79723381208009F0963 /* TweetCell.swift in Sources */,
 				5081F79323370D73009F0963 /* UserCell.swift in Sources */,
 				508DDAF523347AFF0017E806 /* UserHeaderFooter.swift in Sources */,
+				5081F79C23387749009F0963 /* Service.swift in Sources */,
 				5081F791233703B6009F0963 /* User.swift in Sources */,
 				508DDAF023346E760017E806 /* HomeDatasourceController.swift in Sources */,
 			);
