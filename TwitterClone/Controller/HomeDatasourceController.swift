@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -20,8 +22,32 @@ class HomeDatasourceController: DatasourceController {
         
         setupNavigationBarItems()
         
-        let homeDatasource = HomeDataSource()
-        self.datasource = homeDatasource
+//        let homeDatasource = HomeDataSource()
+//        self.datasource = homeDatasource
+        
+        fetchHomeFeed()
+    }
+    
+    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
+    
+    class JSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            print("JSON ERROR")
+        }
+    }
+    
+    fileprivate func fetchHomeFeed() {
+        // start json fetch
+        let request: APIRequest<HomeDataSource, JSONError> = tron.swiftyJSON.request("/twitter/home")
+        
+        request.perform(withSuccess: { (homeDataSource) in
+            print("Successfully fetched our json objects")
+            print(homeDataSource.users.count)
+            
+            self.datasource = homeDataSource
+        }) { (err) in
+            print("Failed to fetch json...", err)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

@@ -7,6 +7,7 @@ target 'TwitterClone' do
 
   # Pods for TwitterClone
   
-  pod "LBTAComponents"
+  pod 'LBTAComponents'
+  pod 'TRON'
 
 end

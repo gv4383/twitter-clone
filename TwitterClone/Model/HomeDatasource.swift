@@ -7,18 +7,29 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDataSource: Datasource {
+class HomeDataSource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let goyoUser = User(name: "Goyo Var", username: "@goyoyo", bioText: "Good hello my doggies! I'm learning Swift to make iOS apps and it's hard, but also kinda fun actually.", profileImage: UIImage(named: "profile_image")!)
+    let users: [User]
+    
+    required init(json: JSON) throws {
+        var users = [User]()
         
-        let tokaseUser = User(name: "Tokase Gokulo", username: "@tokagoku", bioText: "Tokase Gokulo is an iOS developer and tweets on topics related to iOS, software, and gaming. Check out our conference!", profileImage: UIImage(named: "other_image")!)
+        let array = json["users"].array
         
-        let crocsUser = User(name: "Crocs Lover", username: "@crocs4lyfe", bioText: "Crocks ROCK. I absolutely love wearing crocs. Hot outside? Easy ventilation. Cold outside? Just wear some socks underneath. Going to a party? What better way to impress the crowd then to wear your crocs! I CANNOT express how much these things have changed my life... SERIOUSLY. GET. SOME. CROCS. NOW.", profileImage: UIImage(named: "other_image")!)
+        for userJson in array! {
+            let name = userJson["name"].stringValue
+            let username = userJson["username"].stringValue
+            let bio = userJson["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            users.append(user)
+        }
         
-        return [tokaseUser, goyoUser, crocsUser]
-    }()
+        self.users = users
+    }
     
     let tweets: [Tweet] = {
         let goyoUser = User(name: "Goyo Var", username: "@goyoyo", bioText: "Good hello my doggies! I'm learning Swift to make iOS apps and it's hard, but also kinda fun actually.", profileImage: UIImage(named: "profile_image")!)
