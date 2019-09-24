@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import TRON
 import SwiftyJSON
 
-struct Tweet {
+struct Tweet: JSONDecodable {
     let user: User
     let message: String
     

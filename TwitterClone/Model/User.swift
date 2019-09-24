@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import TRON
 import SwiftyJSON
 
-struct User {
+struct User: JSONDecodable {
     let name: String
     let username: String
     let bioText: String
