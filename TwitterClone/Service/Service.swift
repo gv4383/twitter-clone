@@ -17,7 +17,7 @@ struct Service {
     
     func fetchHomeFeed(completion: @escaping (HomeDataSource?, Error?) -> ()) {
         // start json fetch
-        let request: APIRequest<HomeDataSource, JSONError> = tron.swiftyJSON.request("/twitter/home1")
+        let request: APIRequest<HomeDataSource, JSONError> = tron.swiftyJSON.request("/twitter/home")
         
         request.perform(withSuccess: { (homeDataSource) in
             completion(homeDataSource, nil)
